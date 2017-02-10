@@ -6,13 +6,15 @@ import java.util.GregorianCalendar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//import com.scg.domain.ClientAccount;
+import com.scg.domain.ClientAccount;
+import com.scg.util.Name;
+
 //import com.scg.domain.Consultant;
 //import com.scg.domain.ConsultantTime;
 //import com.scg.domain.NonBillableAccount;
 //import com.scg.domain.Skill;
 //import com.scg.domain.TimeCard;
-//import com.scg.util.Name;
+
 
 /**
  * Assignment 02 application.
@@ -62,6 +64,7 @@ public final class Assignment02 {
      *
      * @return the created client accounts
      */
+    
     private static ClientAccount[] createClientAccounts() {
         final ClientAccount[] accounts = {
             new ClientAccount("Acme Industries",
@@ -71,6 +74,7 @@ public final class Assignment02 {
         };
         return accounts;
     }
+    
 
     /**
      * Create some time card instances.  Also, creates the consultants the
@@ -83,6 +87,7 @@ public final class Assignment02 {
      *
      * @return the created time cards
      */
+    /*
     private static TimeCard[] createTimeCards(final ClientAccount[] clients,
                                              final int month, final int startDay,
                                              final int year) {
@@ -208,6 +213,7 @@ public final class Assignment02 {
 
         return timeCards;
     }
+    */
 
     /**
      * Print the time card instances.
@@ -215,11 +221,13 @@ public final class Assignment02 {
      * @param timeCards the time cards to print
      * @param out The output stream; can be System.out or a text file.
      */
+    /*
     private static void printTimeCards(final TimeCard[] timeCards, final PrintStream out) {
         for (final TimeCard timeCard : timeCards) {
             out.print(timeCard.toReportString());
         }
     }
+    */
 
     /**
      * The application method.
@@ -227,9 +235,14 @@ public final class Assignment02 {
      * @param args Command line arguments.
      */
     public static void main(final String[] args) {
-        System.out.print("Hey");
-
-        //final ClientAccount[] clients = createClientAccounts();
+        final ClientAccount[] clients = createClientAccounts();
+        
+        for (ClientAccount client: clients){
+        	System.out.println(client.getContact());
+        }
+        
+        
+        
         //final TimeCard[] cards = createTimeCards(clients,
         //        TEST_MONTH, TEST_START_FIRST_WEEK, TEST_YEAR);
         // Print 'em
