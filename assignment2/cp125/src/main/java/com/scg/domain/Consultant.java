@@ -15,4 +15,8 @@ public class Consultant {
 		return name.toString();
 	}
 	
+	public final Name getName(){
+		return this.name;
+	}
+	
 }
