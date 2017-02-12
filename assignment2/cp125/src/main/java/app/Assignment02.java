@@ -9,11 +9,11 @@ import org.slf4j.LoggerFactory;
 import com.scg.domain.ClientAccount;
 import com.scg.util.Name;
 
-//import com.scg.domain.Consultant;
-//import com.scg.domain.ConsultantTime;
-//import com.scg.domain.NonBillableAccount;
-//import com.scg.domain.Skill;
-//import com.scg.domain.TimeCard;
+import com.scg.domain.Consultant;
+import com.scg.domain.ConsultantTime;
+import com.scg.domain.NonBillableAccount;
+import com.scg.domain.Skill;
+import com.scg.domain.TimeCard;
 
 
 /**
@@ -87,7 +87,7 @@ public final class Assignment02 {
      *
      * @return the created time cards
      */
-    /*
+    
     private static TimeCard[] createTimeCards(final ClientAccount[] clients,
                                              final int month, final int startDay,
                                              final int year) {
@@ -213,7 +213,7 @@ public final class Assignment02 {
 
         return timeCards;
     }
-    */
+    
 
     /**
      * Print the time card instances.
@@ -221,13 +221,13 @@ public final class Assignment02 {
      * @param timeCards the time cards to print
      * @param out The output stream; can be System.out or a text file.
      */
-    /*
+    
     private static void printTimeCards(final TimeCard[] timeCards, final PrintStream out) {
         for (final TimeCard timeCard : timeCards) {
             out.print(timeCard.toReportString());
         }
     }
-    */
+    
 
     /**
      * The application method.
@@ -242,11 +242,10 @@ public final class Assignment02 {
         }
         
         
-        
-        //final TimeCard[] cards = createTimeCards(clients,
-        //        TEST_MONTH, TEST_START_FIRST_WEEK, TEST_YEAR);
+        final TimeCard[] cards = createTimeCards(clients,
+                TEST_MONTH, TEST_START_FIRST_WEEK, TEST_YEAR);
         // Print 'em
-        //printTimeCards(cards, System.out);
+        printTimeCards(cards, System.out);
     }
 
 }
