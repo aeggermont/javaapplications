@@ -1,6 +1,6 @@
 package com.scg.util;
 
-public class Name {
+public final class  Name {
 	
 	private String firstName;
 	private String lastName;
@@ -59,7 +59,7 @@ public class Name {
 		strOutput.append(this.lastName);
 		strOutput.append(", ");
 		strOutput.append(this.firstName);
-		strOutput.append(", ");
+		strOutput.append(" ");
 		strOutput.append(this.middleName);
 		
 		return strOutput.toString();
